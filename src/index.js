@@ -12,6 +12,10 @@ type Props = React.ElementConfig<'div'> & {
   insertSpaces: boolean,
   ignoreTabKey: boolean,
   padding: number | string,
+  paddingTop: number | string,
+  paddingRight: number | string,
+  paddingBottom: number | string,
+  paddingLeft: number | string,
   style?: {},
 
   // Props for the textarea
@@ -134,7 +138,7 @@ export default class Editor extends React.Component<Props, State> {
   _getLines = (text: string, position: number) =>
     text.substring(0, position).split('\n');
 
-  _recordChange = (record: Record, overwrite?: boolean = false) => {
+  _recordChange = (record: Record, overwrite: boolean = false) => {
     const { stack, offset } = this._history;
 
     if (stack.length && offset > -1) {
@@ -508,6 +512,10 @@ export default class Editor extends React.Component<Props, State> {
       value,
       style,
       padding,
+      paddingTop,
+      paddingRight,
+      paddingBottom,
+      paddingLeft,
       highlight,
       textareaId,
       textareaClassName,
@@ -536,10 +544,10 @@ export default class Editor extends React.Component<Props, State> {
     } = this.props;
 
     const contentStyle = {
-      paddingTop: padding,
-      paddingRight: padding,
-      paddingBottom: padding,
-      paddingLeft: padding,
+      paddingTop: paddingTop || padding,
+      paddingRight: paddingRight || padding,
+      paddingBottom: paddingBottom || padding,
+      paddingLeft: paddingLeft || padding,
     };
 
     const highlighted = highlight(value);

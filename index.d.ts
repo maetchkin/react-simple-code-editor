@@ -14,6 +14,10 @@ declare module 'maetchkin-react-simple-code-editor' {
       insertSpaces?: boolean;
       ignoreTabKey?: boolean;
       padding?: number | string;
+      paddingTop?: number | string;
+      paddingRight?: number | string;
+      paddingBottom?: number | string;
+      paddingLeft?: number | string;
       style?: React.CSSProperties;
 
       // Props for the textarea

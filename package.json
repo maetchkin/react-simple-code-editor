@@ -1,6 +1,6 @@
 {
   "name": "maetchkin-react-simple-code-editor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "fork react-simple-code-editor",
   "keywords": [],
   "scripts": {
@@ -50,7 +50,7 @@
     "release-it": "^12.4.1"
   },
   "peerDependencies": {
-    "react":  "^16.0.0 || ^17.0.0",
-    "react-dom":  "^16.0.0 || ^17.0.0"
+    "react": "^16.0.0 || ^17.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0"
   }
 }
